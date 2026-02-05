@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  science:
+    build: .
+    image: sciml-ude:latest
+    container_name: sciml_ude_container
+    volumes:
+      - .:/app
+    environment:
+      - JULIA_PROJECT=/app
+      - GKSwstype=100
+    command: tail -f /dev/null
