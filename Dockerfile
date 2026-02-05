@@ -2,6 +2,7 @@ FROM julia:1.10
 
 WORKDIR /app
 
+
 RUN apt-get update && apt-get install -y \
     build-essential \
     unzip \
@@ -12,9 +13,24 @@ RUN apt-get update && apt-get install -y \
 
 ENV GKSwstype=100
 
-COPY Project.toml Manifest.toml* /app/
+RUN julia -e 'using Pkg; Pkg.activate("."); \
+    Pkg.add([ \
+        "ComponentArrays", \
+        "DifferentialEquations", \
+        "ForwardDiff", \
+        "Lux", \
+        "Optimization", \
+        "OptimizationOptimJL", \
+        "OptimizationOptimisers", \
+        "Plots", \
+        "Random", \
+        "SciMLSensitivity", \
+        "Statistics", \
+        "Printf" \
+    ]); \
+    Pkg.precompile()'
 
-RUN julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate(); Pkg.precompile()'
+
 
 COPY . /app
 
