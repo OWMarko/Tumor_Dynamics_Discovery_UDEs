@@ -6,7 +6,6 @@ include("../src/tools.jl")
 include("../src/models.jl")
 include("../src/physics.jl")
 
-println("--- EXP 01: Reconstruction (Dense Data) ---")
 
 # We define how the drug flows in the body
 # Doses: Administered at t=10, 20, 30
