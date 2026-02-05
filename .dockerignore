@@ -1,0 +1,6 @@
+.git
+.gitignore
+docs/*.png
+docs/*.pdf
+README.md
+docker-compose.yml
