@@ -82,9 +82,8 @@ end
 function train(dyn_func, label)
     #  We pass protocol_train here
     prob = ODEProblem((du,u,p,t)->dyn_func(du,u,p,t,protocol_train), u0, t_train_span, p_init)
-    
-    loss(p, _) = mean(abs2, Array(solve(prob, Vern7(), saveat=t_data, p=p, abstol=1e-2)) .- y_train_noisy)
-    
+
+    loss(p, _) = mean(abs2, log.(Array(solve(...)) .+ 1e-9) .- log.(y_train_noisy .+ 1e-9))    
     optf = Optimization.OptimizationFunction(loss, Optimization.AutoForwardDiff())
     
     # Adam -> BFGS
