@@ -27,7 +27,7 @@ I designed a series of benchmarks to test if this hybrid approach could beat a s
 
 ### Visual Proof : Generalization 
 
-![Generalization Benchmark](docs/exp05_generalization_test.png)
+![Generalization Benchmark](docs/05_generalization_test.png)
 *(Fig : The Hybrid UDE adapting to unseen protocols where Pure AI fails)*
 
 ## How to Reproduce (Docker)
