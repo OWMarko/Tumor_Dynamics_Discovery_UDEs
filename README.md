@@ -25,6 +25,11 @@ I designed a series of benchmarks to test if this hybrid approach could beat a s
 * **Experiment 3 : The Forecasting Trap** I hid a specific dose (Day 70) from the training set.
 * **Experiment 4 : Zero-Shot Generalization** I tested the model on a completely new dosing schedule it had never seen.
 
+### Visual Proof : Generalization 
+
+![Generalization Benchmark](docs/exp05_generalization_test.png)
+*(Fig : The Hybrid UDE adapting to unseen protocols where Pure AI fails)*
+
 ## How to Reproduce (Docker)
 
 Since this is my first project involving this tech stack, I wanted to make sure it was reproducible for everyone not just on my machine. I have containerized the entire environment (Julia 1.10, SciML ecosystem, Plots).
