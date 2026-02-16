@@ -1,6 +1,6 @@
 # Discovery of Hidden Tumor Dynamics via Neural UDEs
 
-To be completely transparent from the start : this project marks a personal milestone. While I have spent time studying the mathematics behind **Universal Differential Equations (UDEs)**, i.e. the interplay between differential operators and universal approximators, this is my very first venture into implementing them in code.
+To be completely transparent from the start : this project marks a personal milestone. While I have spent time studying the mathematics behind Universal Differential Equations (UDEs), i.e. the interplay between differential operators and universal approximators, this is my very first venture into implementing them in code.
 
 I am stepping out of my pure math comfort zone here. My goal was to see if I could take the theoretical rigour I know and translate it into a working AI architecture that doesn't just fit data, but actually **discovers biological laws**.
 
@@ -65,7 +65,7 @@ Check the `docs/` folder. The generated plots (like `exp06_generalization.png`) 
 
 ## Tech Stack & Acknowledgments
 
-I chose **Julia** over Python for this project because of the **DifferentialEquations.jl** ecosystem. When mixing Neural Nets with ODEs the equations become "stiff" (numerically unstable). Julia’s `Vern7` solver and `ForwardDiff` (automatic differentiation) were essential to making this work without crashing. Also I wanted to learn how to code in Julia, it's my first project with this programming language.
+I chose Julia over Python for this project because of the DifferentialEquations.jl ecosystem. When mixing Neural Nets with ODEs the equations become "stiff" (numerically unstable). Julia’s `Vern7` solver and `ForwardDiff` (automatic differentiation) were essential to making this work without crashing. Also I wanted to learn how to code in Julia, it's my first project with this programming language.
 
 * **SciML ecosystem** (Chris Rackauckas et al.) for the incredible tooling.
 * **Lux.jl** for the explicit parameter handling in neural networks.
